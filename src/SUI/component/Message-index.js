@@ -1,10 +1,90 @@
 import React,{Component} from 'react';
+import mypic from "../img/avatar-mini4.jpg";
+import otherpic from '../img/user.jpg';
+
 class Message extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+            list:[
+                {
+                    name:"John Smith",
+                    time:new Date,
+                    message:'Vivamus diam elit diam, consectetur dapibus adipiscing elit.'
+                },
+                {
+                    name:"Jenifer Smith",
+                    time:new Date,
+                    message:'Vivamus diam elit diam, consectetur dapibus adipiscing elit.'
+                },
+                {
+                    name:"John Smith",
+                    time:new Date,
+                    message:'Vivamus diam elit diam, consectetur dapibus adipiscing elit.'
+                },
+                {
+                    name:"Jenifer Smith",
+                    time:new Date,
+                    message:'Vivamus diam elit diam, consectetur dapibus adipiscing elit.'
+                }, 
+            ],
+            val:"",
+         }
+    }
+
+    change = (ev) => {
+            this.setState({
+                val:ev.target.value
+            })
+    };
+    click = (ev) => {
+        let {val} = this.state;
+        let obj = {
+            name:"Jenifer Smith",
+            time:new Date,
+            message:val,
+        } ;
+        let {list} = this.state;
+        list.unshift(obj);
+        console.log(list);
+        this.setState({list,val:''});
+        
     }
     render() { 
+        let {list,val}  =  this.state;
+        let liDiv = list.map((e,i)=>{
+            let minutes = e.time.getMinutes()
+            let time = e.time.getHours()+":"+ minutes;
+            if(e.name=="Jenifer Smith"){
+                return(
+                    <li className="clear" key={i}>
+                        <div className="chat-contentLeft Left">
+                                <div className="chat-meta">{time}<span className="pull-right">{e.name}</span></div>
+                                {e.message}
+                        </div> 
+    
+                        <div className="imgborder Right">
+                                <img src={mypic} />
+                        </div>
+                    </li>
+                )
+            }
+            else{
+                return (
+                <li className="clear" key={i}>
+                    <div className="imgborder Left">
+                        <img src={otherpic} />
+                    </div>
+                            
+                    <div className="chat-contentRight Right">
+                        <div className="chat-meta">{e.name}<span className="pull-right">{time}</span></div>
+                        {e.message}
+                    </div> 
+                </li> 
+                )
+            }
+        });
+
         return ( 
             <div className="message">
             <div className="messageTittle">
@@ -12,57 +92,16 @@ class Message extends Component {
                 <span>消 息</span>
             </div>
             <div className="messageContent">
-                <li className="clear">
-                    <div className="imgborder Left">
-                        <img src={require("../img/user.jpg") } />
-                    </div>
-                            
-                    <div className="chat-contentRight Right">
-                        <div className="chat-meta">John Smith <span className="pull-right">3 hours ago</span></div>
-                        Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                    </div> 
-                </li>
-
-
-                <li className="clear">
-                    <div className="chat-contentLeft Left">
-                            <div className="chat-meta">3 hours ago<span className="pull-right">John Smith</span></div>
-                            Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                    </div> 
-
-                    <div className="imgborder Right">
-                            <img src = {require("../img/user.jpg") }/>
-                    </div>
-                </li>
-
-                <li className="clear">
-                    <div className="imgborder Left">
-                        <img src = {require("../img/user.jpg") } />
-                    </div>
-                            
-                    <div className="chat-contentRight Right">
-                        <div className="chat-meta">John Smith <span className="pull-right">3 hours ago</span></div>
-                        Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                    </div> 
-                </li>
-
-
-                <li className="clear">
-                    <div className="chat-contentLeft Left">
-                            <div className="chat-meta">3 hours ago<span className="pull-right">John Smith</span></div>
-                            Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                    </div> 
-
-                    <div className="imgborder Right">
-                            <img src={require("../img/user.jpg") } />
-                    </div>
-                </li>
-                
-                <input type="text" className="mesInput"/>
-                
-                <button className="mesButton">发送</button>
+           
+           
+            {liDiv}
+   
                 
             </div>
+                         
+            <input type="text" className="mesInput" value={val} onChange={this.change}/>
+                
+            <button className="mesButton" onClick={this.click}>发送</button>
         </div>
         )
     }

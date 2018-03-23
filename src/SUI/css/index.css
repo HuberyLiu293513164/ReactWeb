@@ -45,7 +45,6 @@ li {
   display: block;
   background-color: #eeeeee;
   margin-left: 194px;
-  height: 2000px;
   padding-top: 1px;
   font-size: 0;
 }
@@ -253,6 +252,7 @@ li {
   border: 1px solid #ddd;
   background-color: white;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 .content .main-content .messageTodo .message .messageTittle {
   height: 30px;
@@ -272,7 +272,9 @@ li {
   font-weight: bold;
 }
 .content .main-content .messageTodo .message .messageContent {
-  padding: 16px;
+  padding: 10px;
+  height: 400px ;
+  overflow-y: auto;
 }
 .content .main-content .messageTodo .message .messageContent li {
   margin-bottom: 20px;
@@ -307,7 +309,8 @@ li {
   border-style: solid dashed dashed;
   float: left;
   position: absolute;
-  top: 9%;
+  top: 7px;
+  left: 15%;
   margin-left: -50px;
   border-color: transparent white transparent transparent;
 }
@@ -321,6 +324,7 @@ li {
   border-radius: 5px;
   font-size: 13px;
   color: #797979;
+  word-break: break-all;
 }
 .content .main-content .messageTodo .message .messageContent .chat-contentRight .chat-meta {
   font-size: 11px;
@@ -336,6 +340,7 @@ li {
   border-radius: 5px;
   font-size: 13px;
   color: #797979;
+  word-wrap: break-word;
 }
 .content .main-content .messageTodo .message .messageContent .chat-contentLeft .chat-meta {
   font-size: 11px;
@@ -360,23 +365,29 @@ li {
   border-style: solid dashed dashed;
   float: left;
   position: absolute;
-  top: 9%;
-  margin-left: 181px;
+  top: 7px;
+  left: 100%;
   border-color: transparent  transparent transparent white;
 }
-.content .main-content .messageTodo .message .messageContent .mesInput {
+.content .main-content .messageTodo .message .mesInput {
   width: 215px;
   height: 30px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  position: absolute;
+  bottom: 10px;
+  left: 17px;
 }
-.content .main-content .messageTodo .message .messageContent .mesButton {
+.content .main-content .messageTodo .message .mesButton {
   background-color: blue;
   border-radius: 10px;
   width: 59px;
   height: 40px;
   border: none;
   outline: none;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 .content .main-content .messageTodo .todo {
   margin: 0 16px;

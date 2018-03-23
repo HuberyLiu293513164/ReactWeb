@@ -9,6 +9,7 @@ class Rank extends Component {
                     ranknum:1,
                     name:"Google",
                     score:99,
+                    color:'red'
                 },
                 {
                     ranknum:2,
@@ -50,25 +51,58 @@ class Rank extends Component {
                     name:"XIAOMI",
                     score:91,
                 },
-
             ]
-      
-
         }
     }
     render() { 
         let {list} = this.state;
         
         let liDiv = list.map((e,i) =>{
-            return(
-                <li key={i}>
-                    <div className="tittle t1">
-                        {e.ranknum}
-                    </div>
-                    <span>{e.name}</span>
-                    <i className="end">{e.score}</i>
-                </li>
-            )
+            if(e.ranknum==1){
+                return(
+                    <li key={i}>
+                        <div className="tittle t1">
+                            {e.ranknum}
+                        </div>
+                        <span>{e.name}</span>
+                        <i className="end">{e.score}</i>
+                    </li>
+                )
+            }
+            else if(e.ranknum==2){
+                return(
+                    <li key={i}>
+                        <div className="tittle t2">
+                            {e.ranknum}
+                        </div>
+                        <span>{e.name}</span>
+                        <i className="end">{e.score}</i>
+                    </li>
+                )
+            }
+            else if(e.ranknum==3){
+                return(
+                    <li key={i}>
+                        <div className="tittle t3">
+                            {e.ranknum}
+                        </div>
+                        <span>{e.name}</span>
+                        <i className="end">{e.score}</i>
+                    </li>
+                )
+            }
+            else {
+                return(
+                    <li key={i}>
+                        <div className="tittle t">
+                            {e.ranknum}
+                        </div>
+                        <span>{e.name}</span>
+                        <i className="end">{e.score}</i>
+                    </li>
+                )
+            }
+
         });
 
         return (      

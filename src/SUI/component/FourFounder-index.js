@@ -35,7 +35,7 @@ class FourFounder extends Component {
     }
     render() { 
         let {list} = this.state;
-        console.log(list);
+       
         let listDiv = list.map((e,i)=>{
             return(
                 <div className="rowbox" key={i}>

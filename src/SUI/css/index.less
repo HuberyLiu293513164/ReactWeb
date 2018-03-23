@@ -37,11 +37,8 @@ ul,ol,li {
 
 .content {
 	display: block;
-	// width: 100%;
-	
 	background-color:#eeeeee;
 	margin-left: 194px;
-	height: 2000px;
 	padding-top: 1px;
 	font-size:0;
 	.main-content {
@@ -275,6 +272,7 @@ ul,ol,li {
 					border: 1px solid #ddd;
 					background-color:white;
 					box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.6);
+					position: relative;
 					.messageTittle {
 						height: 30px;
 						border-bottom: 2px solid #ddd;
@@ -294,7 +292,10 @@ ul,ol,li {
 						}
 					}
 					.messageContent {
-						padding: 16px;
+						padding: 10px;
+						height:400px ;
+						overflow-y: auto;
+						
 						li {
 							margin-bottom: 20px;
 							
@@ -332,7 +333,8 @@ ul,ol,li {
 							border-style: solid dashed dashed;
 							float: left;
 							position: absolute;
-							top:9%;
+							top:7px;
+							left:15%;
 							margin-left: -50px;
 							border-color: transparent white transparent transparent; 
 						}
@@ -346,7 +348,7 @@ ul,ol,li {
 							border-radius: 5px;
 							font-size: 13px;   
 							color:#797979;
-
+							word-break:break-all;
 							.chat-meta {
 								font-size: 11px;
 								color: #999;
@@ -363,7 +365,8 @@ ul,ol,li {
 							border-radius: 5px;
 							font-size: 13px;   
 							color:#797979;
-
+							// word-break:break-all;
+							word-wrap: break-word;
 							.chat-meta {
 								font-size: 11px;
 								color: #999;
@@ -390,28 +393,35 @@ ul,ol,li {
 							border-style: solid dashed dashed;
 							float: left;
 							position: absolute;
-							top:9%;
-							margin-left: 181px;
+							top:7px;
+							left:100%;
 							border-color: transparent  transparent transparent white; 
 						}
 
-						.mesInput {
-							width: 215px;
-							height: 30px;
-							// background-color:red;
-							border: 1px solid #ddd;
-							border-radius: 4px;
-						}
-						.mesButton {
-							background-color: blue;
-							border-radius: 10px;
-							width: 59px;
-							height: 40px;
-							border: none;
-							outline: none;
-							
-						}
 
+
+					}
+					.mesInput {
+						width: 215px;
+						height: 30px;
+						// background-color:red;
+						border: 1px solid #ddd;
+						border-radius: 4px;
+						position: absolute;
+						bottom: 10px;
+						left:17px;
+					}
+					.mesButton {
+						background-color: blue;
+						border-radius: 10px;
+						width: 59px;
+						height: 40px;
+						border: none;
+						outline: none;
+						position: absolute;
+						bottom: 5px;
+						right: 5px;
+						
 					}
 				}
 				.todo {
