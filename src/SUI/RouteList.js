@@ -5,8 +5,8 @@ import {
   } from 'react-router-dom';
 
 import Index from './component/Index.js'
-import Source from './component/Source.js'
-import User from './component/User.js'
+import Source from './component/source/Source.js'
+import User from './component/user/User.js'
 import Analyse from './component/Analyse.js'
 
 class RouteList extends Component {

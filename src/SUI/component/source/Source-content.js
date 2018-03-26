@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
-import '../css/Source.css';
-import '../font-awesome/css/font-awesome.min.css';
+import '../../css/Source.css';
+import '../../font-awesome/css/font-awesome.min.css';
 import Webpie from './Source-c-pie';
 import Webline from './Source-c-line';
 

@@ -21,6 +21,7 @@ class Index extends Component {
     // setOption = {
     //     myChart1.setOption(option1);
     // }
+    
 
     render() {
   

@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
-import '../css/User.css';
-import '../font-awesome/css/font-awesome.min.css';
+import '../../css/User.css';
+import '../../font-awesome/css/font-awesome.min.css';
 import TuopuChart from "./User-c-tuopu"
-import TVchart1 from "./User-c-TV1"
+// import TVchart1 from "./User-c-TV1"
 import TVchart2 from "./User-c-TV2"
 import TVchart3 from "./User-c-TV3"
 
@@ -96,7 +96,7 @@ class UserContent extends Component {
                 <div className="tvchart">
                         <TuopuChart/>
 
-                        <TVchart1/>
+                        {/* <TVchart1/> */}
 
                         <TVchart2/>
                         

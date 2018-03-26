@@ -1,10 +1,11 @@
 import React,{Component} from 'react';
-import Head from './Head-index';
-import Side from './Side-index';
-import UserContent from './User-content';
+import Head from '../Head-index';
+import Side from '../Side-index';
+import SourceContent from './Source-content';
 
 
-class User extends Component {
+
+class Source extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -14,11 +15,11 @@ class User extends Component {
             <div>
                 <Head />
                 <Side />
-                <UserContent />
+                <SourceContent />
             </div>
 
         )
     }
 }
  
-export default User;
+export default Source;

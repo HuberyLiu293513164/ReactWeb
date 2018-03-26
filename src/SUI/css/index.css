@@ -249,6 +249,7 @@ li {
 }
 .content .main-content .messageTodo .message {
   margin: 0 16px;
+  height: 510px;
   border: 1px solid #ddd;
   background-color: white;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
@@ -393,6 +394,7 @@ li {
   margin: 0 16px;
   background-color: white;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+  position: relative;
 }
 .content .main-content .messageTodo .todo .todoTittle {
   height: 54px;
@@ -436,10 +438,9 @@ li {
   margin-left: 5px;
 }
 .content .main-content .messageTodo .todo .todoContent {
-  padding: 16px;
+  padding: 16px 16px 0 16px;
   display: grid;
-  grid-template-columns: 23% 30% 30% auto;
-  grid-template-rows: 57px repeat(8, 45px);
+  grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .content .main-content .messageTodo .todo .todoContent .todoFirst {
   line-height: 57px;
@@ -447,9 +448,78 @@ li {
   font-weight: bold;
   text-align: center;
 }
-.content .main-content .messageTodo .todo .todoContent .todoline {
+.content .main-content .messageTodo .todo .fixBottom {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 16px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 32px;
+  border-top: 1px solid #ddd;
+}
+.content .main-content .messageTodo .todo .fixBottom:hover {
+  cursor: pointer;
+  background-color: tan;
+}
+.content .main-content .messageTodo .todo .todolineNormal {
+  padding: 0 16px;
+  width: 744.5px;
+}
+.content .main-content .messageTodo .todo .todolineNormal .show {
+  display: inline-block;
+  width: 20%;
   line-height: 45px;
+  height: 45px;
   font-size: 14px;
+  text-align: center;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.content .main-content .messageTodo .todo .todolineNormal .edit {
+  display: inline-block;
+  width: 20%;
+  line-height: 45px;
+  height: 45px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.content .main-content .messageTodo .todo .todolineNormal .todoButton {
+  display: inline-block;
+  width: 20%;
+  line-height: 46px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.content .main-content .messageTodo .todo .todolineEdit {
+  padding: 0 16px;
+  width: 744.5px;
+}
+.content .main-content .messageTodo .todo .todolineEdit .show {
+  display: none;
+  line-height: 45px;
+  height: 45px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+.content .main-content .messageTodo .todo .todolineEdit .edit {
+  width: 20%;
+  line-height: 45px;
+  height: 45px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+}
+.content .main-content .messageTodo .todo .todolineEdit .todoButton {
+  display: inline-block;
+  width: 18%;
+  line-height: 46px;
   text-align: center;
   border-top: 1px solid #ddd;
 }

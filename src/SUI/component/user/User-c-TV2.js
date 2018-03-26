@@ -13,13 +13,11 @@ class TVchart2 extends Component{
 
         componentDidMount() {
             var TVchart2 = echarts.init(document.getElementById('TVchart2'));
-            // 基于准备好的dom，初始化echarts实例
             var base = +new Date(2016, 9, 3);
             var oneDay = 24 * 3600 * 1000;
             var date = [];
-            
             var data = [Math.random() * 100];
-            
+        
             for (var i = 1; i < 550; i++) {
                 var now = new Date(base += oneDay);
                 date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'));
@@ -34,14 +32,8 @@ class TVchart2 extends Component{
                     }
                 },
                 title: {
-                    left: 'center',
-                    //text: '大数据量面积图',
+                    left: 'center', 
                 },
-                // toolbox: {
-                //     feature: {
-                //         saveAsImage: {}
-                //     }
-                // },
                 xAxis: {
                     type: 'category',
                     boundaryGap: false,

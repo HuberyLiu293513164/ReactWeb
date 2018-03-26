@@ -47,6 +47,10 @@
   opacity: 0.6;
   padding-left: 30px;
 }
+.header .Hsearch .searchItem li:hover {
+  background-color: blue;
+  cursor: pointer;
+}
 .header .Hright2 {
   display: inline-block;
   float: right;
