@@ -1,0 +1,30 @@
+.member {
+  width: 97%;
+  height: 500px;
+  padding: 16px;
+}
+.member .memberbox {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100%;
+}
+.member .memberbox .memberTittle {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-align: center;
+  line-height: 50px;
+}
+.member .memberbox .memberTittle span {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.member .memberbox .memberTittle .last {
+  border-right: none;
+}
+.member .memberbox .memberContent {
+  width: 100%;
+  height: 45px;
+  background-color: green;
+}

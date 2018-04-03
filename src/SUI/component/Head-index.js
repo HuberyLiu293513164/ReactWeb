@@ -31,7 +31,7 @@ class Head extends Component {
 
                 let dataLi = data.s.map((e,i)=>{
 
-                    return <li key={i} onClick={this.click}>{e}</li>
+                    return <li key={i} >{e}</li>
                 });
     
                 that.setState({
@@ -55,7 +55,6 @@ class Head extends Component {
         let {val} = this.state;
         let that = this;
         window.location.href='http://www.baidu.com/s?wd='+val;
-   
         this.setState({
             val:''
         });

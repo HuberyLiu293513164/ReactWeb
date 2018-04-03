@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
-import '../../css/User.css';
+import './css/User.css';
 import '../../font-awesome/css/font-awesome.min.css';
 import TuopuChart from "./User-c-tuopu"
-// import TVchart1 from "./User-c-TV1"
+
 import TVchart2 from "./User-c-TV2"
 import TVchart3 from "./User-c-TV3"
 
@@ -34,7 +34,8 @@ class UserContent extends Component {
                     </span>
                 </ul>
                 
-                <nav>
+               
+                {/* <nav>
                     <div className="timeMeasure findstyle"> 
                         <strong>时间粒度：</strong>
                         <select className="timeMeasureSlec" id="timeMeasureSlec">
@@ -45,10 +46,10 @@ class UserContent extends Component {
                     </div>
                     <div className="time findstyle">  
                             <span> <strong>开始时间</strong>
-                                {/* <input class="setTime" name="control_date" type="text" id="control_date" size="10" maxlength="10" onClick="new Calendar().show(this);" readonly="readonly"/> */}
+                                <input class="setTime" name="control_date" type="text" id="control_date" size="10" maxlength="10" onClick="new Calendar().show(this);" readonly="readonly"/>
                             </span>
                             <span><strong>结束时间</strong>
-                                {/* <input class="setTime" name="control_date2" type="text" id="control_date2" size="10" maxlength="10" onClick="new Calendar().show(this);" readonly="readonly"/> */}
+                                <input class="setTime" name="control_date2" type="text" id="control_date2" size="10" maxlength="10" onClick="new Calendar().show(this);" readonly="readonly"/>
                             </span>
                         
                     </div>
@@ -91,12 +92,12 @@ class UserContent extends Component {
                         </select>
                     </div>
                     <button>查询</button>
-                </nav>   
+                </nav>  */}
+                
+                
 
                 <div className="tvchart">
                         <TuopuChart/>
-
-                        {/* <TVchart1/> */}
 
                         <TVchart2/>
                         

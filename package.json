@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.3.3",
     "echarts": "^4.0.4",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1",
     "react-bmap": "^1.0.69",
+    "react-dom": "^15.4.1",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1"
   },
